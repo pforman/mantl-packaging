@@ -1,0 +1,26 @@
+---
+name: ops-ca
+version: 0.0.1
+license: ASL 2.0
+iteration: 1
+vendor: pforman
+architecture: noarch
+description: >
+  Certificate Authority for testing, with hooks to install.
+type: rpm
+
+depends:
+  - openssl
+  - bash
+
+targets:
+  - src: '{{.SpecRoot}}/CA.pem'
+    dest: /etc/pki/CA/ops-ca.cert
+  - src: '{{.SpecRoot}}/CA.pem'
+    dest: /etc/pki/ca-trust/source/ops-cacert.pem
+  - src: '{{.SpecRoot}}/CA.pem'
+    dest: /etc/pki/ca-trust/source/anchors/ops-cacert.pem
+
+scripts:
+  after-install: |
+    update-ca-trust
