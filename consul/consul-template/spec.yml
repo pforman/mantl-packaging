@@ -1,8 +1,8 @@
 ---
 name: consul-template
-version: 0.15.0
+version: 0.16.0
 license: MPLv2.0
-iteration: 2
+iteration: 1
 vendor: Hashicorp
 url: https://github.com/hashicorp/consul-template
 architecture: x86_64
@@ -15,7 +15,7 @@ depends:
 resources:
   - url: https://releases.hashicorp.com/consul-template/{{.Version}}/consul-template_{{.Version}}_linux_amd64.zip
     hash-type: sha256
-    hash: b7561158d2074c3c68ff62ae6fc1eafe8db250894043382fb31f0c78150c513a
+    hash: 064b0b492bb7ca3663811d297436a4bbf3226de706d2b76adade7021cd22e156
 
 targets:
   - src: "{{.BuildRoot}}/consul-template"
