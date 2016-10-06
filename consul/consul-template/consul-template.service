@@ -3,6 +3,8 @@ Description={{.Description}}
 Documentation={{.URL}}
 After=network-online.target
 Wants=network-online.target
+After=cloud-config.service consul.service
+Wants=cloud-config.service consul.service
 
 [Service]
 EnvironmentFile=-/etc/sysconfig/consul-template

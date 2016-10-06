@@ -5,6 +5,8 @@ After=network-online.target
 Wants=network-online.target
 After=rsyslog.service
 Wants=rsyslog.service
+After=cloud-config.service
+Wants=cloud-config.service
 
 [Service]
 User=consul

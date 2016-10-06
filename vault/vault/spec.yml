@@ -1,6 +1,6 @@
 ---
 name: vault
-version: 0.6.1
+version: 0.6.2
 license: MPLv2.0
 iteration: 1
 vendor: Hashicorp
@@ -15,7 +15,7 @@ depends:
 resources:
   - url: https://releases.hashicorp.com/vault/{{.Version}}/vault_{{.Version}}_linux_amd64.zip
     hash-type: sha256
-    hash: 4f248214e4e71da68a166de60cc0c1485b194f4a2197da641187b745c8d5b8be
+    hash: 91432c812b1264306f8d1ecf7dd237c3d7a8b2b6aebf4f887e487c4e7f69338c
 
 targets:
   - src: "{{.BuildRoot}}/vault"

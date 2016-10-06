@@ -1,0 +1,27 @@
+---
+name: goss
+version: 0.2.4
+license: Apache 2.0
+iteration: 1
+vendor: aelsabbahy
+url: https://github.com/aelsabbahy/goss
+architecture: x86_64
+description: Quick and Easy server testing/validation
+type: rpm
+
+depends:
+
+resources:
+  - url: https://github.com/aelsabbahy/goss/releases/download/v{{.Version}}/goss-linux-amd64
+    hash-type: sha256
+    hash: baa32d95df6967fd189f354482535a4b9324a2ed9b82dcd0327cf9730a537327
+
+targets:
+  - src: "{{.BuildRoot}}/goss-linux-amd64"
+    dest: /usr/bin/goss
+
+scripts:
+  build:
+
+extra-args: |
+  --rpm-os linux
